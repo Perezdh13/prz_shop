@@ -2,6 +2,7 @@ import React from 'react'
 import instaLogo from '../../../assets/img/instagram.png'
 import przLogo from '../../../assets/img/logoPRZ.png'
 import './NavBar.css'
+import { Link } from 'react-router-dom'
 
 function NavBar() {
   return (
@@ -17,7 +18,9 @@ function NavBar() {
       <div style={{ margin: "0px" }} >
         <nav className="navbar navbar-expand-lg bg-body-tertiary" >
           <div className="container-fluid">
+            <Link to="/">
             <img src={przLogo} style={{height:"10vh"}}/>
+            </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -50,6 +53,9 @@ function NavBar() {
                 <input className="form-control me-2" type="search" placeholder="Busqueda" aria-label="Search" />
                 <button className="btn btn-outline-warning" type="submit">Buscar</button>
               </form>
+              <Link to="/logged">
+              <button className="btn btn-outline-warning">Login</button>
+              </Link>
             </div>
           </div>
         </nav>

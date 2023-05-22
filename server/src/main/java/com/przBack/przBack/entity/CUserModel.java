@@ -15,13 +15,15 @@ public class CUserModel {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
    @Column
     private String name;
-
-  @Column
+   @Column
     private String lastname;
-
-
+   @Column
+    private String nick;
+   @Column
+    private String email;
+   @Column
+    private String password;
 
 }
